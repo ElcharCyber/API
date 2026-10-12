@@ -1,0 +1,44 @@
+{
+  "name": "openjob-restful-api",
+  "version": "2.0.0",
+  "description": "OpenJob RESTful API V2 Submission for Dicoding Back-End Expert",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+    "start:consumer": "node src/consumer.js",
+    "migrate": "node-pg-migrate",
+    "migrate:up": "node-pg-migrate up",
+    "migrate:down": "node-pg-migrate down"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "redis",
+    "rabbitmq",
+    "multer",
+    "restful-api",
+    "dicoding",
+    "openjob"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^2.2.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "joi": "^18.2.9",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "nanoid": "^3.3.7",
+    "node-pg-migrate": "^9.0.0",
+    "nodemailer": "^10.1.0",
+    "pg": "^8.23.1",
+    "redis": "^6.3.0"
+  },
+  "devDependencies": {
+    "newman": "^6.2.3",
+    "nodemon": "^3.1.14"
+  }
+}

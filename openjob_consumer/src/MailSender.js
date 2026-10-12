@@ -1,9 +1,9 @@
 const nodemailer = require('nodemailer');
 
-class MailService {
+class MailSender {
   constructor() {
     this._transporter = nodemailer.createTransport({
-      host: process.env.MAIL_HOST || 'smtp.mailtrap.io',
+      host: process.env.MAIL_HOST || 'sandbox.smtp.mailtrap.io',
       port: Number(process.env.MAIL_PORT) || 2525,
       auth: {
         user: process.env.MAIL_USER || '',
@@ -12,7 +12,7 @@ class MailService {
     });
   }
 
-  async sendEmail(targetEmail, { subject, text, html }) {
+  sendEmail(targetEmail, { subject, text, html }) {
     const message = {
       from: `OpenJob <${process.env.MAIL_FROM || 'no-reply@openjob.com'}>`,
       to: targetEmail,
@@ -25,4 +25,4 @@ class MailService {
   }
 }
 
-module.exports = MailService;
+module.exports = MailSender;

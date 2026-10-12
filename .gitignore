@@ -1,5 +1,21 @@
-node_modules
+# Dependency directories
+node_modules/
+openjob_api/node_modules/
+openjob_consumer/node_modules/
+
+# Environment files
 .env
+openjob_api/.env
+openjob_consumer/.env
+
+# Uploads
+openjob_api/uploads/*
+!openjob_api/uploads/.gitkeep
+
+# Redis dump & system files
+dump.rdb
 npm-debug.log
+yarn-error.log
+
+# Archive
 *.zip
-uploads/
